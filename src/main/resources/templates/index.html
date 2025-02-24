@@ -2,44 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" th:href="@{/index.css}">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <title>Tourist guide</title>
 </head>
 <body>
-<nav class="navigationBar">
-    <a href="/"><h1 class="overskrift"> Turistguide i Danmark </h1></a>
-    <div class="navcontent">
-        <a href="/attractions">Se alle attraktioner</a>
-        <div class="container">
-            <div class="dropdown">
-                <button class="dropbtn"> Se en bestemt attraktion
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="/attractions/Tivoli"> Tivoli </a>
-                    <a href="/attractions/SMK"> SMK </a>
-                    <a href="/attractions/Nyhavn"> Nyhavn </a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn"> Se en attraktion baseret på sæson
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="/seasons/SOMMER"> Sommer </a>
-                    <a href="/seasons/VINTER"> Vinter </a>
-                    <a href="/seasons/HELÅRS"> Helår </a>
-                </div>
-            </div>
-            <a href="/update"target="_blank">Rediger attraktion</a>
-        </div>
-
-    </div>
-</nav>
+<div th:replace="fragments/navbar :: navbar"></div>
 
 <section class="coversection">
-    <img class ="startBillede" src="images/Copenhagen-Panorama.jpg" alt="Photo of denmark">
+    <img class ="startBillede" th:src="@{images/Copenhagen-Panorama.jpg}" alt="Photo of denmark">
         <h2 class="coverText"> Velkommen til Danmarks bedste side for turister </h2>
         <div class="buttons">
             <!--<button type="button" class="knap"> test</button>
@@ -72,7 +43,7 @@
 
 <div class="midtSection">
 
-    <img src="images/rosenborg.jpg" alt="Billede af rosenborg">
+    <img th:src="@{images/rosenborg.jpg}" alt="Billede af rosenborg">
     <div class ="box">
     <p class="billedeText">
         Danmark, et land fyldt med kulturarv og naturskønne oplevelser, byder på noget for enhver smag.

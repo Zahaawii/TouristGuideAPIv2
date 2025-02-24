@@ -8,36 +8,8 @@
 </head>
 <body>
 
-<nav class="navigationBar">
-  <a href="/"><h1 class="overskrift"> Turistguide i Danmark </h1></a>
-  <div class="navcontent">
-    <a href="/attractions" target="_blank">Se alle attraktioner</a>
-    <div class="container">
-      <div class="dropdown">
-        <button class="dropbtn"> Se en bestemt attraktion
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="/attractions/Tivoli"> Tivoli </a>
-          <a href="/attractions/SMK"> SMK </a>
-          <a href="/attractions/Nyhavn"> Nyhavn </a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn"> Se en attraktion baseret på sæson
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="/seasons/SOMMER"> Sommer </a>
-          <a href="/seasons/VINTER"> Vinter </a>
-          <a href="/seasons/HELÅRS"> Helår </a>
-        </div>
-      </div>
-      <a href="/update">Rediger attraktion</a>
-    </div>
+<div th:replace="fragments/navbar :: navbar"></div>
 
-  </div>
-</nav>
 
 <div>
   <h1>Tags for attraktionen</h1>

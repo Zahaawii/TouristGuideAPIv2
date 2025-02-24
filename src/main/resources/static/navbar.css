@@ -1,0 +1,242 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, serif;
+    font-size: 14px;
+}
+
+
+.navigationBar {
+    z-index: 5;
+    background: white;
+    box-shadow: #333333;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navigationBar a {
+    text-decoration: none;
+    color: black;
+}
+
+.overskrift {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.navcontent {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+}
+.navcontent a {
+    align-self: center;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.container {
+    display: flex;
+
+}
+
+.coversection {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+}
+
+.startBillede {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.coverText {
+    position: relative;
+    z-index: 2;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.dropdown {
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    margin: 0;
+}
+.dropbtn {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+    color: black;
+    white-space: nowrap;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #e6e6e6;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.showcases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.showcases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.showcaseContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    position: relative;
+    height: 300px;
+    justify-content: center;
+}
+
+.showcaseContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.showcaseContainer a {
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.showcaseContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.showcaseContainer h2 {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.showcaseContainer p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.midtSection {
+    display: flex;
+}
+
+
+.box {
+    display: flex;
+    align-items: center;
+}
+
+.billedeText {
+    margin-left: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: -2px 0px 26px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px 0px 26px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 0px 26px 0px rgba(0,0,0,0.75);
+    color: black;
+    margin-right: 20px;
+}
+
+.midtSection img {
+    width: 50%;
+    border-radius: 10px;
+    margin-left: 75px;
+    margin-right: 20px;
+    box-shadow: 3px 11px 74px 12px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 11px 74px 12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 11px 74px 12px rgba(0,0,0,0.75);
+    margin-bottom: 20px;
+}

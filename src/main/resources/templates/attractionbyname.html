@@ -6,6 +6,8 @@
     <link rel="stylesheet" th:href="@{/attractionbyname.css}">
 </head>
 <body>
+<div th:replace="fragments/navbar :: navbar"></div>
+
 <div class="center-container">
     <h1 class="heading" th:text="${attraction.name}">Attraction Name</h1>
 

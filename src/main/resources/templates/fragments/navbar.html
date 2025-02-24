@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/navbar.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div th:fragment="navbar">
+  <nav class="navigationBar">
+    <a href="/"><h1 class="overskrift"> Turistguide i Danmark </h1></a>
+    <div class="navcontent">
+      <a href="/attractions">Se alle attraktioner</a>
+      <div class="container">
+        <div class="dropdown">
+          <button class="dropbtn"> Se en bestemt attraktion
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/attractions/Tivoli"> Tivoli </a>
+            <a href="/attractions/SMK"> SMK </a>
+            <a href="/attractions/Nyhavn"> Nyhavn </a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"> Se en attraktion baseret på sæson
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/seasons/SOMMER"> Sommer </a>
+            <a href="/seasons/VINTER"> Vinter </a>
+            <a href="/seasons/HELÅRS"> Helår </a>
+          </div>
+        </div>
+        <a href="/update"target="_blank">Rediger attraktion</a>
+        <a href="/add"target="_blank">Tilføj attraktion</a>
+      </div>
+
+    </div>
+  </nav>
+</div>
+</body>
+</html>
