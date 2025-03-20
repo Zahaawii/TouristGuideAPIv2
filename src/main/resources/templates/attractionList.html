@@ -20,8 +20,7 @@
         <h1 th:text="${i.getName()}"></h1>
         <img th:src="@{${i.imgPath}}" class="imgbox" />
         <p th:text="${i.getDescription()}" class="description"></p>
-        <p th:text="${i.getSeason()}" class="season"></p>
-       <!--Her laver vi en knap-->
+           <!--Her laver vi en knap-->
         <div class="buttonsoverallcontainer">
             <button class="button-87 tags" th:href="@{/attractions/{name}/tags(name=${i.name})}">
                 <a th:href="@{/attractions/{name}/tags(name=${i.name})}" target="_blank">Vis tags </a>

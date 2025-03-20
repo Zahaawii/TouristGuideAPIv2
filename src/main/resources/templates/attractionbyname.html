@@ -1,4 +1,53 @@
 <!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All attractions</title>
+    <link rel="stylesheet" th:href="@{/attractionList.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+
+
+
+<div class="section">
+
+    <div th:each="i : ${attraction}" class="allattractionscontainer">
+        <h1 th:text="${i.getName()}"></h1>
+        <img th:src="@{${i.imgPath}}" class="imgbox" />
+        <p th:text="${i.getDescription()}" class="description"></p>
+    </div>
+
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,7 +90,7 @@
 
 
 
-<!--
+&lt;!&ndash;
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
@@ -63,4 +112,4 @@
 </div>
 </body>
 </html>
--->
+&ndash;&gt;-->

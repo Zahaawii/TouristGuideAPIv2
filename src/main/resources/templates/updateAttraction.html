@@ -25,10 +25,7 @@
             <input type="text" id="attractionDescription" name="attractionDescription"
                    th:field="*{description}"> <br>
 
-        <label for="attracionSeason"> Attraction season: </label>
-        <select id ="attracionSeason" name="attracionSeason" th:field="*{season}">
-            <option th:each="sæson : ${seasonTypes}" th:value="${sæson}" th:text="${sæson.displayName}"> Season: </option>
-        </select>
+
 
         <br><label for="attractionPhoto"> Attraction photo: </label>
         <input type="text" id="attractionPhoto" name="attractionPhoto" th:field="*{imgPath}"><br>
@@ -40,8 +37,8 @@
 
         <label>Attraction tags:</label> <br>
         <div th:each="tag : ${getAllTags}">
-            <input type="checkbox" name="tagsList" th:value="${tag.name()}" th:id="${tag.name()}">
-            <label th:for="${tag.name()}" th:text="${tag.displayName}"></label>
+            <input type="checkbox" name="tagsList" th:value="${tag.name}" th:id="${tag.name}">
+            <label th:for="${tag.name}" th:text="${tag.name}"></label>
         </div>
 
         <br><br>
